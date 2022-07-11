@@ -142,16 +142,18 @@ app.post("/movies",async function(request,response){
     response.send(result);
 });
 
-// app.delete("/movies/:id",async function(request,response){
-//     const { id } = request.params;
-//     console.log(request.params,id);
-// //get movies data from mongodb
-// const result =  await client
-// .db("b32we")
-// .collection("movies").deleteOne({id:id});
-//     // console.log(movie);
-//     result.deletedCount>0 
-//     ? response.send({msg:"movie deleted"});
-//     ? response.send({msg:"movie not found"});
-// });
+app.delete("/movies/:id",async function(request,response){
+    const { id } = request.params;
+    console.log(request.params,id);
+//get movies data from mongodb
+const result =  await client
+.db("b32we")
+.collection("movies").deleteOne({id:id});
+    // console.log(movie);
+    result.deletedCount>0 
+    ? response.send({msg:"movie deleted"});
+    ? response.send({msg:"movie not found"});
+});
 app.listen(PORT,()=>console.log(`app started in ${PORT} `))
+
+

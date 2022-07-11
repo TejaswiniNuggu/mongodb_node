@@ -1,14 +1,14 @@
-const fs=require('fs');
-// const quote="created a file"
-// fs.writeFile('./awesome.html',quote,(err)=>{
+import { writeFile } from 'fs';
+const quote="created a file"
+// writeFile('./awesome/vdhbvx.html',quote,(err)=>{
 //     console.log("done")
 // })
 
-
+// import { writeFile } from 'fs';
 //creating a file with quote in a particular folder
 
-// for(let k=1;k<=i;K++){
-// fs.writeFile(`./backup/text-${K}.html`,quote,(err)=>{
+// for(let k=1;k<=5;k++){
+// writeFile(`./bacp/text-${k}.html`,quote,(err)=>{
 //     console.log("done")
 // })
 // }
@@ -34,12 +34,27 @@ const fs=require('fs');
 
 
 //updating a file
-const quot3="make everydaya"
-fs.appendFile(`./nice.txt`,"\n" + quot3, (err)=>{
-    console.log("completed updating");
-});
+// const quot3="make everydaya"
+// fs.appendFile(`./nice.txt`,"\n" + quot3, (err)=>{
+//     console.log("completed updating");
+// });
 
 //deleting a file
 // fs.unlink("./delete.html",(err)=>{
 //     console.log("completed deleting")
 // })
+
+
+
+// fs.readdir(__dirname, 
+//     { MONGODB_NODE: true },
+//     (err, files) => {
+//     console.log("\nCurrent directory files:");
+//     if (err)
+//       console.log(err);
+//     else {
+//       files.forEach(file => {
+//         console.log(file);
+//       })
+//     }
+//   })
