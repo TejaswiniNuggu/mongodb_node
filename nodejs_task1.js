@@ -2,8 +2,20 @@
 import { readdirSync } from 'fs';
 import { extname } from 'path';
 import { writeFile } from 'fs';
-
+import express from "express";
+// const PORT=4000
 // retriev file from the folder 
+const task=express();
+const PORT=4001;
+// const ap=express();
+// ap.get("/",function(request,response){
+// response.send("hello world");
+// });
+
+// ap.listen(PORT,()=>console.log("app started in port 4001"));
+
+
+
 const testFolder = './task(ymd)/';
 readdirSync(testFolder).forEach(file =>
     {
@@ -47,3 +59,5 @@ readdirSync(testFolder).forEach(file =>
     writeFile(`./task(ymd)/test-${ymd}.html`,ymdhms,err => {
         console.log("completed");
     })
+    
+//   listen(PORT,()=>console.log(`app started in ${PORT} `))
