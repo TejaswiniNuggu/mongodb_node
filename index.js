@@ -7,7 +7,7 @@ dotenv.config();
 console.log(process.env.MONGO_URL)
 const app=express();
 
-const PORT=4000;
+const PORT=process.env.PORT;
 //declaring express.json to all the intercepts
 // middleware-express.json(convert the body to json data) 
 app.use(express.json())
