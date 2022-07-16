@@ -12,6 +12,8 @@ const PORT=process.env.PORT;
 //declaring express.json to all the intercepts
 // middleware-express.json(convert the body to json data) 
 app.use(express.json())
+
+
 app.use(cors());
 // app.listen(PORT,()=>console.log("app started in port 4000"));
 
